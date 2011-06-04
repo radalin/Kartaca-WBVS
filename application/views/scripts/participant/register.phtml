@@ -1,0 +1,20 @@
+
+<?php if ($this->showSuccess) { ?>
+	
+	<h4>Well Done!</h4>
+	<p class="alt">
+		There is a final step you have to fulfill in order to join us! Go and check your emails, you will find the details there! We are awaiting on your return!
+	</p>
+
+<?php } else { ?>
+	<h4>Please Fill this form to become one of us!</h4>
+
+	<?php if ($this->shwoError !== null) { ?>
+	    <div class="error">
+	    	Don't take us as a fool! We have eyes watching over you. Correct the mistakes you have done below
+	    </div>
+	<?php } ?>
+
+	<?=$this->form?>
+
+<?php } ?>

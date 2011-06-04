@@ -1,0 +1,507 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Parti",
+				"ParticipantTable"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/roy/Sites/wbvs2/application/models/tables/ParticipantsTable.php",
+			"settings":
+			{
+				"buffer_size": 749,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/models/tables/VoteTable.php",
+			"settings":
+			{
+				"buffer_size": 1330,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/controllers/IndexController.php",
+			"settings":
+			{
+				"buffer_size": 397,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/controllers/VoteController.php",
+			"settings":
+			{
+				"buffer_size": 356,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/controllers/ParticipantController.php",
+			"settings":
+			{
+				"buffer_size": 2094,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/views/scripts/participant/subscriptions.phtml",
+			"settings":
+			{
+				"buffer_size": 457,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Documents/kartaca-staj",
+			"settings":
+			{
+				"buffer_size": 933,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/layouts/scripts/layout.phtml",
+			"settings":
+			{
+				"buffer_size": 2316,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/models/Vote.php",
+			"settings":
+			{
+				"buffer_size": 390,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/public/style.css",
+			"settings":
+			{
+				"buffer_size": 1213,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"file_history":
+	[
+		"/home/roy/Sites/wbvs2/application/views/scripts/vote/index.phtml",
+		"/home/roy/Documents/kartaca-staj",
+		"/home/roy/Sites/wbvs2/application/models/Vote.php",
+		"/home/roy/Sites/wbvs2/application/models/Answer.php",
+		"/home/roy/Sites/wbvs2/application/models/Participant.php",
+		"/home/roy/Sites/wbvs2/application/models/tables/AnswersTable.html",
+		"/home/roy/Sites/wbvs2/public/index.php",
+		"/home/roy/Sites/wbvs2/library/Kartaca/Model.php",
+		"/home/roy/Sites/wbvs2/library/Kartaca/Table.php",
+		"/home/roy/Sites/wbvs2/application/configs/application.ini",
+		"/home/roy/Sites/wbvs2/application/models/tables/VotesTable.php",
+		"/home/roy/Sites/wbvs2/application/models/tables/PostsTable.php",
+		"/home/roy/Sites/wbvs2/application/Bootstrap.php",
+		"/home/roy/Sites/wbvs2/application/controllers/IndexController.php",
+		"/home/roy/Sites/wbvs2/application/layouts/scripts/layout.phtml",
+		"/home/roy/Sites/wbvs2/public/.htaccess",
+		"/home/roy/Sites/wbvs2/application/controllers/ParticipantController.php",
+		"/home/roy/Sites/wbvs2/application/forms/LoginForm.php",
+		"/home/roy/Sites/wbvs2/application/forms/AddCommentForm.php",
+		"/home/roy/Sites/wbvs2/application/forms/AddPostForm.php",
+		"/home/roy/Sites/wbvs2/application/models/tables/CommentsTable.php",
+		"/home/roy/Sites/wbvs2/application/configs/routes.ini",
+		"/home/roy/Sites/wbvs2/application/models/Comment.php",
+		"/home/roy/Sites/wbvs2/library/Kartaca/Model/Autoloader.php",
+		"/home/roy/Sites/wbvs2/application/controllers/CommentsController.php",
+		"/home/roy/Sites/wbvs2/application/models/User.php",
+		"/home/roy/Documents/dd-sikayet-takip",
+		"/home/roy/Documents/valiant-sayim",
+		"/home/roy/Documents/valiant-ekleme-yapilan-tablolar",
+		"/home/roy/Documents/valiant-egitim-sss",
+		"/home/roy/Documents/valiant-doc",
+		"/home/roy/Documents/seros_test_notlari",
+		"/home/roy/Documents/valiant-kurumsal-cagri-takip"
+	],
+	"find_in_files":
+	{
+		"include_history":
+		[
+		],
+		"location_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"post",
+			"APPLICATION_BASEURL",
+			"$this->baseUrl()"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$this->baseUrl()",
+			"APPLICATION_BASEURL"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	{
+		"mount_points":
+		[
+			"/home/roy/Sites/wbvs2"
+		]
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/roy/Sites/wbvs2/application/models/tables/ParticipantsTable.php",
+					"settings":
+					{
+						"buffer_size": 749,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								208,
+								208
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/roy/Sites/wbvs2/application/models/tables/VoteTable.php",
+					"settings":
+					{
+						"buffer_size": 1330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								112,
+								112
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/roy/Sites/wbvs2/application/controllers/IndexController.php",
+					"settings":
+					{
+						"buffer_size": 397,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								397
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/roy/Sites/wbvs2/application/controllers/VoteController.php",
+					"settings":
+					{
+						"buffer_size": 356,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/roy/Sites/wbvs2/application/controllers/ParticipantController.php",
+					"settings":
+					{
+						"buffer_size": 2094,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2085,
+								2085
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 672,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/roy/Sites/wbvs2/application/views/scripts/participant/subscriptions.phtml",
+					"settings":
+					{
+						"buffer_size": 457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								327,
+								327
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/roy/Documents/kartaca-staj",
+					"settings":
+					{
+						"buffer_size": 933,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								898,
+								898
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/roy/Sites/wbvs2/application/layouts/scripts/layout.phtml",
+					"settings":
+					{
+						"buffer_size": 2316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1086,
+								1086
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 192,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/roy/Sites/wbvs2/application/models/Vote.php",
+					"settings":
+					{
+						"buffer_size": 390,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								382,
+								382
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/home/roy/Sites/wbvs2/public/style.css",
+					"settings":
+					{
+						"buffer_size": 1213,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1109,
+								1109
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 624,
+						"zoom_level": 1
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0,
+			1
+		],
+		"rows":
+		[
+			0,
+			1
+		]
+	},
+	"menu_visible": true,
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0,
+		"selected_items":
+		[
+			[
+				"votecon",
+				"application/controllers/VoteController.php"
+			]
+		],
+		"width": 0
+	},
+	"select_project":
+	{
+		"height": 0,
+		"selected_items":
+		[
+		],
+		"width": 0
+	},
+	"show_minimap": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 184,
+	"status_bar_visible": true
+}

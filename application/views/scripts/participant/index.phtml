@@ -1,0 +1,7 @@
+<?php if ($this->invalidFormError) { ?>
+    <div class="error">You should fill all the fields</div>
+<?php } else if ($this->showWrongPassError) { ?>
+    <div class="error">Credentials you have entered are not valid</div>
+<?php } ?>
+
+<?=$this->form?>

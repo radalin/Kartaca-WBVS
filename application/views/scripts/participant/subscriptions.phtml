@@ -1,0 +1,19 @@
+<?php foreach ($this->votes as $v) { ?>
+	<div class="vote-list vote-list-answered">
+		<h2 class="alt"><?=$v->name?></h2>
+		<div class="desc">
+		    <div class="body">
+		    	<?=nl2br($v->desc)?>
+		    </div>
+		</div>
+	    <div class="answers">
+		    <strong>Answers:</strong><br />
+		    <ul>
+			    <?php foreach ($this->answers[$v->id] as $a) {
+			    	echo "<li>" . $a->vote_count . " - " . $a->text . "</li>";
+			    } ?>
+		    </ul>
+	    </div>
+	</div>
+	<hr />
+<?php } ?>

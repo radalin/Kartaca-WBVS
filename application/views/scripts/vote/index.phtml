@@ -1,0 +1,20 @@
+<?php foreach ($this->votes as $v) { ?>
+	<div class="vote-list">
+		<!-- Linking with routes -->
+	    <span class="alt large">
+	    	<?=$v->name?>
+	    </span>
+	    <span class="small">
+	    	| Time Span: <?=$v->begin_date?> - <?=$v->expire_date?>
+	    </span>
+	    <div class="body">
+	    	<?=nl2br($v->desc)?>
+	    </div>
+	    <div>
+	    	<a href="<?=APPLICATION_BASEURL_INDEX?>/vote/subscribe?vid=<?=$v->id?>&pid=<?=$this->pid?>">
+	    		I want to say my word on this!
+	    	</a>
+	    </div>
+	</div>
+	<hr />
+<?php } ?>
