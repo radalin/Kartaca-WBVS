@@ -71,25 +71,14 @@ h1 {
     text-align: right;
 }
 
+#header-title {
+    float:left;
+}
+
 h2.subheader {
     text-align: right;
 }
 
-.vote-list {
-    height: 80px;
-    width: 400px;
-}
-
-.vote-list-answered {
-    height: 200px;
-}
-
-.vote-list div.desc {
-    float: left;
-}
-
-.vote-list div.answers {
-    float: right;
-    width: 100px;
-    height: 80px;
+.selected-answer {
+    font-weight: bold;
 }

@@ -2,6 +2,7 @@
 
 require_once(APPLICATION_PATH . "/forms/LoginForm.php");
 require_once(APPLICATION_PATH . "/forms/RegisterForm.php");
+require_once(APPLICATION_PATH . "/forms/VoteForm.php");
 
 class ParticipantController extends Zend_Controller_Action
 {
@@ -27,6 +28,7 @@ class ParticipantController extends Zend_Controller_Action
 
     public function indexAction()
     {
+        $this->view->title = "First Checkpoint";
         if ($this->_getParam("error") == "1") {
             $this->view->showWrongPassError = true;
         } else if ($this->_getParam("error") == "2") {
@@ -38,6 +40,7 @@ class ParticipantController extends Zend_Controller_Action
 
     public function loginAction()
     {
+        $this->view->title = "First Checkpoint";
         //First check if the form is valid...
         $_form = new LoginForm();
         if (!$_form->isValid($_POST)) {
@@ -66,6 +69,7 @@ class ParticipantController extends Zend_Controller_Action
 
     public function registerAction()
     {
+        $this->view->title = "Name Yourself!";
         $_showError = false;
         $_success = false;
         $_form = new RegisterForm();
@@ -91,14 +95,30 @@ class ParticipantController extends Zend_Controller_Action
 
     public function subscriptionsAction()
     {
+        if ($this->_participant === null) {
+            throw new Exception("We don't like trespassers, do you know that? Either knock the door or don't come at all...");
+        }
+
+        $this->view->title = "Votes I'm Subscribed";
         $_voteTable = new VoteTable();
         $_votes = $_voteTable->findVotesSubscribedBy($this->_participant->id);
         $_answers = array();
-        foreach ($_votes as $v) {
-            $_answers[$v->id] = $v->findAnswers();
+        $_selectedAnswers = array();
+        $_forms = array();
+        foreach ($_votes as $_v) {
+            $_answers[$_v->id] = $_v->findAnswers();
+            $_selectedAnswers[$_v->id] = $_v->isVotedBy($this->_participant->id);
+            if (null === $_selectedAnswers[$_v->id]) {
+                $_f = new VoteForm();
+                $_f->setAnswers($_answers[$_v->id]);
+                $_f->setVote($_v->id);
+                $_forms[$_v->id] = clone $_f;
+            }
         }
         $this->view->votes = $_votes;
         $this->view->answers = $_answers;
+        $this->view->selectedAnswers = $_selectedAnswers;
+        $this->view->forms = $_forms;
     }
 
     private function _sendActivationEmail(Participant $p)

@@ -23,8 +23,11 @@ $this->headLink()->appendStylesheet($this->baseUrl() . "/style.css");
 <body>
     <div class="container">
         <h1>Web Based Voting System</h1>
-        <h2 class="alt subheader">Be The Voter You Always Wantd To Be!</h2>
+        <h2 class="alt subheader">Be The Voter You Always Wanted To Be!</h2>
         <hr />
+        <div id="header-title">
+            <h3><?=$this->title?></h3>
+        </div>
         <div id="header">
             <span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>">Home</a></span> |
             <?php if (Zend_Auth::getInstance()->getIdentity()) { ?>

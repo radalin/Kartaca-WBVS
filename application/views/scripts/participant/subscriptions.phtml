@@ -1,19 +1,30 @@
 <?php foreach ($this->votes as $v) { ?>
-	<div class="vote-list vote-list-answered">
-		<h2 class="alt"><?=$v->name?></h2>
+	<div class="span-8 colborder">
+    	<?php 
+    	$_selected = $this->selectedAnswers[$v->id];
+    	if ($_selected !== null) {
+    		echo "<h6>Results:</h6><ul>";
+	    	foreach ($this->answers[$v->id] as $_a) {
+	    		$_str = $_a->vote_count . " - " . $_a->text;
+	    		if ($_a->id == $_selected->id) {
+	    			$_str = '<span class="alt selected-answer">' . $_str . " (You have chosen wisely)</span>";
+	    		}
+	    		echo "<li>" . $_str . "</li>";
+	    	}
+	    	echo "</ul>";
+	    } else {
+	    	echo "<h6>Decide!</h6>";
+	    	echo $this->forms[$v->id];
+	    }
+	    ?>
+    </div>
+    <div class="span-7 last">
+	    <h6 class="alt"><?=$v->name?></h6>
 		<div class="desc">
 		    <div class="body">
 		    	<?=nl2br($v->desc)?>
 		    </div>
 		</div>
-	    <div class="answers">
-		    <strong>Answers:</strong><br />
-		    <ul>
-			    <?php foreach ($this->answers[$v->id] as $a) {
-			    	echo "<li>" . $a->vote_count . " - " . $a->text . "</li>";
-			    } ?>
-		    </ul>
-	    </div>
 	</div>
-	<hr />
+    <hr />
 <?php } ?>
