@@ -1,0 +1,21 @@
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Email</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Edit/Delete</th>
+	</tr>
+	<?php foreach ($this->participants as $_p) { ?>
+		<tr>
+			<td><?=$_p->id?></td>
+			<td><?=$_p->email?></td>
+			<td><?=$_p->fname?></td>
+			<td><?=$_p->lname?></td>
+			<td>
+				<a href="<?=APPLICATION_BASEURL_INDEX?>/admin/participantedit?act=edit&pid=<?=$_p->id?>" class="alt">Edit</a> | 
+				<a href="<?=APPLICATION_BASEURL_INDEX?>/admin/participantedit?act=del&pid=<?=$_p->id?>" class="alt">Delete</a>
+			</td>
+		</tr>
+	<?php } ?>
+</table>

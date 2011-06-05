@@ -33,6 +33,10 @@ $this->headLink()->appendStylesheet($this->baseUrl() . "/style.css");
             <?php if (Zend_Auth::getInstance()->getIdentity()) { ?>
                 <span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/vote">Participate A Vote</a></span> |
                 <span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/participant/subscriptions">What I Voted</a></span> |
+                <?php if (ADMIN_ENABLED === 1) { ?>
+                    <span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/admin/vote">Manage Votes</a></span> |
+                    <span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/admin/participant">Manage Participants</a></span> |
+                <?php } ?>
                 <span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/participant/logout">Say GoobBye!</a></span>
             <?php } else { ?>
                 <span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/participant">I want to Come In</a></span> | 

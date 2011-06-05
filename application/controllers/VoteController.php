@@ -1,6 +1,6 @@
 <?php
 
-class VoteController extends Zend_Controller_Action
+class VoteController extends Kartaca_Controller
 {
 	/**
 	 * @var VoteTable
@@ -17,11 +17,9 @@ class VoteController extends Zend_Controller_Action
     {
         /* Initialize action controller here */
         $this->_table = new VoteTable();
+        $this->_participant = parent::getActiveParticipant();
         //Active participant...
-        $_t = new ParticipantsTable();
-        if (Zend_Auth::getInstance()->getIdentity()) {
-            $this->_participant = $_t->findByEmail(Zend_Auth::getInstance()->getIdentity());
-        } else {
+        if (null === $this->_participant){
             throw new Exception("We don't like visitors here. You have to login in order to come inside!");
         }
     }

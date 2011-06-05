@@ -4,7 +4,7 @@ require_once(APPLICATION_PATH . "/forms/LoginForm.php");
 require_once(APPLICATION_PATH . "/forms/RegisterForm.php");
 require_once(APPLICATION_PATH . "/forms/VoteForm.php");
 
-class ParticipantController extends Zend_Controller_Action
+class ParticipantController extends Kartaca_Controller
 {
     /**
      * @var ParticipantTable
@@ -21,9 +21,7 @@ class ParticipantController extends Zend_Controller_Action
     {
         /* Initialize action controller here */
         $this->_table = new ParticipantsTable();
-        if (Zend_Auth::getInstance()->getIdentity()) {
-            $this->_participant = $this->_table->findByEmail(Zend_Auth::getInstance()->getIdentity());
-        }
+        $this->_participant = parent::getActiveParticipant();
     }
 
     public function indexAction()

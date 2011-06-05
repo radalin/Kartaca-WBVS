@@ -4,12 +4,52 @@
 		"selected_items":
 		[
 			[
+				"create",
+				"createElement"
+			],
+			[
+				"_ans",
+				"_answer"
+			],
+			[
+				"ans",
+				"answerId"
+			],
+			[
+				"Answ",
+				"AnswersTable"
+			],
+			[
 				"par",
 				"participantId"
 			],
 			[
+				"voteI",
+				"voteId"
+			],
+			[
+				"vot",
+				"voted"
+			],
+			[
+				"parti",
+				"participantId"
+			],
+			[
 				"_par",
-				"_participantId"
+				"_participant"
+			],
+			[
+				"getP",
+				"getParam"
+			],
+			[
+				"sel",
+				"selectedAnswers"
+			],
+			[
+				"partic",
+				"participantId"
 			],
 			[
 				"partici",
@@ -48,10 +88,18 @@
 			}
 		},
 		{
+			"file": "/home/roy/Sites/wbvs2/application/models/tables/ParticipantAnswerTable.php",
+			"settings":
+			{
+				"buffer_size": 1350,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "/home/roy/Sites/wbvs2/application/controllers/IndexController.php",
 			"settings":
 			{
-				"buffer_size": 397,
+				"buffer_size": 207,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,7 +107,7 @@
 			"file": "/home/roy/Sites/wbvs2/application/controllers/VoteController.php",
 			"settings":
 			{
-				"buffer_size": 996,
+				"buffer_size": 1553,
 				"line_ending": "Unix"
 			}
 		},
@@ -67,7 +115,7 @@
 			"file": "/home/roy/Sites/wbvs2/application/views/scripts/participant/subscriptions.phtml",
 			"settings":
 			{
-				"buffer_size": 476,
+				"buffer_size": 815,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,7 +123,7 @@
 			"file": "/home/roy/Sites/wbvs2/application/layouts/scripts/layout.phtml",
 			"settings":
 			{
-				"buffer_size": 2573,
+				"buffer_size": 2660,
 				"line_ending": "Unix"
 			}
 		},
@@ -83,23 +131,7 @@
 			"file": "/home/roy/Sites/wbvs2/application/models/Vote.php",
 			"settings":
 			{
-				"buffer_size": 390,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/roy/Sites/wbvs2/public/style.css",
-			"settings":
-			{
-				"buffer_size": 1388,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/roy/Sites/wbvs2/application/models/Participant.php",
-			"settings":
-			{
-				"buffer_size": 642,
+				"buffer_size": 681,
 				"line_ending": "Unix"
 			}
 		},
@@ -107,7 +139,7 @@
 			"file": "/home/roy/Sites/wbvs2/application/views/scripts/vote/index.phtml",
 			"settings":
 			{
-				"buffer_size": 520,
+				"buffer_size": 500,
 				"line_ending": "Unix"
 			}
 		},
@@ -115,7 +147,15 @@
 			"file": "/home/roy/Sites/wbvs2/application/controllers/ParticipantController.php",
 			"settings":
 			{
-				"buffer_size": 3117,
+				"buffer_size": 4043,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/forms/VoteForm.php",
+			"settings":
+			{
+				"buffer_size": 868,
 				"line_ending": "Unix"
 			}
 		},
@@ -126,27 +166,55 @@
 				"buffer_size": 904,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/public/style.css",
+			"settings":
+			{
+				"buffer_size": 1248,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/public/index.php",
+			"settings":
+			{
+				"buffer_size": 753,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/controllers/ErrorController.php",
+			"settings":
+			{
+				"buffer_size": 2630,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
 	"file_history":
 	[
-		"/home/roy/Sites/wbvs2/library/Kartaca/Model.php",
-		"/home/roy/Sites/wbvs2/application/models/tables/ParticipantSubscription.php",
-		"/home/roy/Sites/wbvs2/application/models/tables/ParticipantSubscriptions.php",
+		"/home/roy/Sites/wbvs2/application/models/tables/AnswersTable.php",
+		"/home/roy/Sites/wbvs2/application/models/Answer.php",
+		"/home/roy/Sites/wbvs2/application/models/tables/AnswersTable.html",
+		"/home/roy/Sites/wbvs2/public/style.css",
+		"/home/roy/Sites/wbvs2/application/models/Participant.php",
 		"/home/roy/Sites/wbvs2/application/forms/LoginForm.php",
+		"/home/roy/Sites/wbvs2/application/models/ParticipantAnswer.php",
+		"/home/roy/Sites/wbvs2/application/models/tables/ParticipantSubscription.php",
+		"/home/roy/Sites/wbvs2/application/models/ParticipantAnswer",
+		"/home/roy/Sites/wbvs2/library/Kartaca/Model.php",
+		"/home/roy/Sites/wbvs2/application/models/tables/ParticipantSubscriptions.php",
 		"/home/roy/Sites/wbvs2/application/forms/RegisterForm.php",
 		"/home/roy/Sites/wbvs2/application/controllers/ParticipantController.php",
 		"/home/roy/Sites/wbvs2/application/views/scripts/participant/register.phtml",
 		"/home/roy/Sites/wbvs2/library/Kartaca/Table.php",
-		"/home/roy/Sites/wbvs2/application/models/Answer.php",
 		"/home/roy/Sites/wbvs2/application/views/scripts/participant/index.phtml",
 		"/home/roy/Sites/wbvs2/application/views/scripts/index/index.phtml",
 		"/home/roy/Documents/kartaca-staj",
 		"/home/roy/Sites/wbvs2/application/views/scripts/vote/index.phtml",
 		"/home/roy/Sites/wbvs2/application/models/Vote.php",
-		"/home/roy/Sites/wbvs2/application/models/Participant.php",
-		"/home/roy/Sites/wbvs2/application/models/tables/AnswersTable.html",
 		"/home/roy/Sites/wbvs2/public/index.php",
 		"/home/roy/Sites/wbvs2/application/configs/application.ini",
 		"/home/roy/Sites/wbvs2/application/models/tables/VotesTable.php",
@@ -230,8 +298,8 @@
 						"selection":
 						[
 							[
-								489,
-								489
+								367,
+								367
 							]
 						],
 						"settings":
@@ -258,8 +326,8 @@
 						"selection":
 						[
 							[
-								296,
-								296
+								543,
+								543
 							]
 						],
 						"settings":
@@ -269,25 +337,51 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 0,
+						"translation.y": 192,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/home/roy/Sites/wbvs2/application/controllers/IndexController.php",
+					"file": "/home/roy/Sites/wbvs2/application/models/tables/ParticipantAnswerTable.php",
 					"settings":
 					{
-						"buffer_size": 397,
+						"buffer_size": 1350,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								397
+								1317,
+								1317
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 48,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/roy/Sites/wbvs2/application/controllers/IndexController.php",
+					"settings":
+					{
+						"buffer_size": 207,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								207,
+								207
 							]
 						],
 						"settings":
@@ -303,19 +397,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "/home/roy/Sites/wbvs2/application/controllers/VoteController.php",
 					"settings":
 					{
-						"buffer_size": 996,
+						"buffer_size": 1553,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								387,
-								387
+								1188,
+								1188
 							]
 						],
 						"settings":
@@ -325,25 +419,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 144,
+						"translation.y": 175,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "/home/roy/Sites/wbvs2/application/views/scripts/participant/subscriptions.phtml",
 					"settings":
 					{
-						"buffer_size": 476,
+						"buffer_size": 815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								486,
+								486
 							]
 						],
 						"settings":
@@ -358,19 +452,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "/home/roy/Sites/wbvs2/application/layouts/scripts/layout.phtml",
 					"settings":
 					{
-						"buffer_size": 2573,
+						"buffer_size": 2660,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1098,
-								1098
+								439,
+								439
 							]
 						],
 						"settings":
@@ -380,58 +474,30 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 336,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/home/roy/Sites/wbvs2/application/models/Vote.php",
-					"settings":
-					{
-						"buffer_size": 390,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								92,
-								92
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
+						"translation.y": 144,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "/home/roy/Sites/wbvs2/public/style.css",
+					"file": "/home/roy/Sites/wbvs2/application/models/Vote.php",
 					"settings":
 					{
-						"buffer_size": 1388,
+						"buffer_size": 681,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								255,
-								255
+								408,
+								408
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -443,44 +509,18 @@
 				},
 				{
 					"buffer": 8,
-					"file": "/home/roy/Sites/wbvs2/application/models/Participant.php",
-					"settings":
-					{
-						"buffer_size": 642,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								637,
-								637
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
 					"file": "/home/roy/Sites/wbvs2/application/views/scripts/vote/index.phtml",
 					"settings":
 					{
-						"buffer_size": 520,
+						"buffer_size": 500,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								509,
-								509
+								410,
+								410
 							]
 						],
 						"settings":
@@ -495,19 +535,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "/home/roy/Sites/wbvs2/application/controllers/ParticipantController.php",
 					"settings":
 					{
-						"buffer_size": 3117,
+						"buffer_size": 4043,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2144,
-								2144
+								2132,
+								2132
 							]
 						],
 						"settings":
@@ -517,7 +557,33 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 1152,
+						"translation.y": 1023,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/home/roy/Sites/wbvs2/application/forms/VoteForm.php",
+					"settings":
+					{
+						"buffer_size": 868,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -534,8 +600,8 @@
 						"selection":
 						[
 							[
-								393,
-								393
+								6,
+								6
 							]
 						],
 						"settings":
@@ -546,6 +612,88 @@
 						},
 						"translation.x": 0,
 						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/home/roy/Sites/wbvs2/public/style.css",
+					"settings":
+					{
+						"buffer_size": 1248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1066,
+								1066
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 735,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/home/roy/Sites/wbvs2/public/index.php",
+					"settings":
+					{
+						"buffer_size": 753,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								322,
+								322
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/home/roy/Sites/wbvs2/application/controllers/ErrorController.php",
+					"settings":
+					{
+						"buffer_size": 2630,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1887,
+								1887
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 336,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -583,11 +731,15 @@
 		"selected_items":
 		[
 			[
-				"parti",
-				"application/controllers/ParticipantController.php"
+				"erro",
+				"application/controllers/ErrorController.php"
 			],
 			[
-				"pa",
+				"votefo",
+				"application/forms/VoteForm.php"
+			],
+			[
+				"partici",
 				"application/controllers/ParticipantController.php"
 			],
 			[
@@ -595,16 +747,32 @@
 				"application/controllers/VoteController.php"
 			],
 			[
-				"par",
+				"st",
+				"public/style.css"
+			],
+			[
+				"part",
 				"application/controllers/ParticipantController.php"
 			],
 			[
-				"partici",
+				"partic",
 				"application/controllers/ParticipantController.php"
 			],
 			[
 				"vote",
-				"application/views/scripts/vote/index.phtml"
+				"application/models/Vote.php"
+			],
+			[
+				"pa",
+				"application/models/ParticipantAnswer.php"
+			],
+			[
+				"parti",
+				"application/controllers/ParticipantController.php"
+			],
+			[
+				"par",
+				"application/controllers/ParticipantController.php"
 			],
 			[
 				"pari",

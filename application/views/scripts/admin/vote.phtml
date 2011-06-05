@@ -1,0 +1,23 @@
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Begining Date</th>
+		<th>Expiring Date</th>
+		<th>Edit/Delete</th>
+	</tr>
+	<?php foreach ($this->votes as $_v) { ?>
+		<tr>
+			<td><?=$_v->id?></td>
+			<td><?=$_v->name?></td>
+			<td><?=$_v->desc?></td>
+			<td><?=$_v->begin_date?></td>
+			<td><?=$_v->expire_date?></td>
+			<td>
+				<a href="<?=APPLICATION_BASEURL_INDEX?>/admin/voteedit?act=edit&vid=<?=$_v->id?>" class="alt">Edit</a> | 
+				<a href="<?=APPLICATION_BASEURL_INDEX?>/admin/voteedit?act=del&vid=<?=$_v->id?>" class="alt">Delete</a>
+			</td>
+		</tr>
+	<?php } ?>
+</table>
