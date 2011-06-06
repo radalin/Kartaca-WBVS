@@ -17,6 +17,14 @@ class Vote extends Kartaca_Model
         return $this->_table->fetchAll($_select);
     }
 
+    public function loadFromForm(CreateVoteForm $f)
+    {
+        $this->name = $f->getVname();
+        $this->desc = $f->getDesc();
+        $this->begin_date = $f->getBegindate();
+        $this->expire_date = $f->getExpiredate();
+    }
+
     /**
      * 
      *

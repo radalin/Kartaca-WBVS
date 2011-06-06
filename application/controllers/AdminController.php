@@ -1,6 +1,8 @@
 <?php
 
 require_once(APPLICATION_PATH . "/forms/ParticipantInfoUpdateForm.php");
+require_once(APPLICATION_PATH . "/forms/CreateVoteForm.php");
+
 
 class AdminController extends Kartaca_Controller
 {
@@ -34,20 +36,36 @@ class AdminController extends Kartaca_Controller
         $_action = $this->getRequest()->getParam("act");
         $_vid = $this->getRequest()->getParam("vid");
         $_t = new VoteTable();
+        $_form = new CreateVoteForm();
         if ($_action === "del") {
             $_t->deleteById($_vid);
             $this->_redirect(APPLICATION_BASEURL_INDEX . "/admin/vote");
         } else if ($_action === "edit") {
-            $_form = new ParticipantInfoUpdateForm();
             //TODO: fill the form with actual values...
-            $this->view->form = $_form;
+            $_vote = $_t->findById($_vid);
+            $_form->loadFromModel($_vote);
         } else if ($_action === "create") {
-            $_form = new ParticipantInfoUpdateForm();
-            //TODO: fill the form with actual values...
-            $this->view->form = $_form;
         } else if ($_action === "save") {
-            
+            $_vote = null;
+            if ($_vid != "") {
+                $_vote = $_t->findById($_vid);
+                $_form->loadFromModel($_vote);
+            }
+            if ($_form->isValid($_POST)) {
+                if ($_vid == "") {
+                    $_vote = $_t->createRow();
+                    $_vote->loadFromForm($_form);
+                    $_vote->insert();
+                } else {
+                    $_vote->loadFromForm($_form);
+                    $_vote->save();
+                }
+                $this->_redirect(APPLICATION_BASEURL_INDEX . "/admin/vote");
+            } else {
+                $this->view->errorMsg = "Correct the errors below...";
+            }
         }
+        $this->view->form = $_form;
     }
 
     public function participantAction()
