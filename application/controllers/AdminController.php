@@ -44,6 +44,7 @@ class AdminController extends Kartaca_Controller
             //TODO: fill the form with actual values...
             $_vote = $_t->findById($_vid);
             $_form->loadFromModel($_vote);
+            $this->view->answers = $_vote->findAnswers();
         } else if ($_action === "create") {
         } else if ($_action === "save") {
             $_vote = null;

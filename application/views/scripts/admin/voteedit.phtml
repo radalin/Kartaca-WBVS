@@ -3,4 +3,65 @@
 	<?php echo $this->errorMsg; ?>
 </div>
 <?php } ?>
-<?=$this->form?>
+<div class="span-8 colborder" style="width: 400px;">
+	<?=$this->form?>
+</div>
+<div class="span-7 last" style="width: 300px;">
+	<?php
+		$_totalVoteCount = 0;
+		echo "<h6>Results:</h6><ul>";
+		foreach ($this->answers as $_a) {
+			$_str = $_a->vote_count . " - " . $_a->text;
+			echo "<li>" . $_str . "</li>";
+			$_totalVoteCount += $_a->vote_count;
+		}
+		echo "</ul>";
+	?>
+	<div id="chart" style="width:100%;">
+	</div>
+</div>
+<hr />
+<?php if ($this->answers) { ?>
+<script>
+		var chart;
+		$(document).ready(function() {
+		   chart = new Highcharts.Chart({
+		      chart: {
+		         renderTo: 'chart',
+		         plotBackgroundColor: null,
+		         plotBorderWidth: null,
+		         plotShadow: false
+		      },
+		      title: {
+		         text: ''
+		      },
+		      tooltip: {
+		         formatter: function() {
+		            return this.y + ' % - <b>' + this.point.name + '</b>';
+		         }
+		      },
+		      plotOptions: {
+		         pie: {
+		            allowPointSelect: true,
+		            cursor: 'pointer',
+		            dataLabels: {
+		               enabled: true,
+		               formatter: function() {
+		                  return this.y + ' % - <b>'+ this.point.name + '</b>';
+		               }
+		            }
+		         }
+		      },
+		       series: [{
+		         type: 'pie',
+		         name: 'Vote Results',
+		         data: [
+		         	<?php foreach ($this->answers as $_a) { ?>
+		         		<?="['{$_a->text}', " . (int) ($_a->vote_count * 100 / $_totalVoteCount) . "],"?>
+		            <?php } ?>
+		         ]
+		      }]
+		   });
+		});
+	</script>
+<?php } ?>
