@@ -19,6 +19,7 @@ class AdminController extends Kartaca_Controller
         if (ADMIN_ENABLED !== 1) {
             throw new Exception("Get out of my sight! You don't belong here!");
         }
+        parent::isParticipanActive();
     }
 
     public function voteAction()
@@ -61,26 +62,36 @@ class AdminController extends Kartaca_Controller
         $_action = $this->getRequest()->getParam("act");
         $_pid = $this->getRequest()->getParam("pid");
         $_t = new ParticipantsTable();
+        $_form = new ParticipantInfoUpdateForm();
         if ($_action === "del") {
             $_t->deleteById($_pid);
             $this->_redirect(APPLICATION_BASEURL_INDEX . "/admin/participant");
         } else if ($_action === "edit") {
-            $_form = new ParticipantInfoUpdateForm();
             //TODO: fill the form with actual values...
             $_participant = $_t->findById($_pid);
             $_form->loadFromModel($_participant);
-            $this->view->form = $_form;
         } else if ($_action === "create") {
-            $_form = new ParticipantInfoUpdateForm();
-            //TODO: fill the form with actual values...
-            $this->view->form = $_form;
         } else if ($_action === "save") {
-            if ($_pid === null) {
-                //insert
+            $_participant = null;
+            if ($_pid != "") {
+                $_participant = $_t->findById($_pid);
+                $_form->loadFromModel($_participant);
+            }
+            if ($_form->isValid($_POST)) {
+                if ($_pid == "") {
+                    $_participant = $_t->createRow();
+                    $_participant->loadFromForm($_form);
+                    $_participant->insert();
+                } else {
+                    $_participant->loadFromForm($_form);
+                    $_participant->save();
+                }
+                $this->_redirect(APPLICATION_BASEURL_INDEX . "/admin/participant");
             } else {
-                //update
+                $this->view->errorMsg = "Correct the errors below...";
             }
         }
+        $this->view->form = $_form;
     }
 
     public function exportAction()

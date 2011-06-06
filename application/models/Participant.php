@@ -5,10 +5,18 @@ class Participant extends Kartaca_Model
 	public function loadFromForm(Zend_Form $form)
 	{
 		$this->email = $form->getEmail();
-		$this->password = sha1($form->getPassword());
+		if (!$form->getPassword() == "") {
+			$this->password = sha1($form->getPassword());	
+		} 
 		$this->fname = $form->getFname();
 		$this->lname = $form->getLname();
 		$this->company = $form->getCompany();
+		if ($form->getIsadmin() == 1) {
+			$this->is_admin = 1;
+		}
+		if ($form->getIsactive()) {
+			$this->is_active = 1;
+		}
 	}
 
 	public function createActivationLink()

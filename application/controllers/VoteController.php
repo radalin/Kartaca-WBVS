@@ -32,6 +32,7 @@ class VoteController extends Kartaca_Controller
 
     public function subscribeAction()
     {
+        parent::isParticipanActive();
         $_participantId = $this->_participant->id;
         $_voteId = $this->getRequest()->getParam("vid");
         
@@ -42,6 +43,7 @@ class VoteController extends Kartaca_Controller
 
     public function voteAction()
     {
+        parent::isParticipanActive();
         $_voteId = $this->getRequest()->getParam("vid");
         $_answerId = $this->getRequest()->getParam("aid");
 

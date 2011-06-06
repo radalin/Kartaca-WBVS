@@ -96,6 +96,7 @@ class ParticipantController extends Kartaca_Controller
         if ($this->_participant === null) {
             throw new Exception("We don't like trespassers, do you know that? Either knock the door or don't come at all...");
         }
+        parent::isParticipanActive();
 
         $this->view->title = "Votes I'm Subscribed";
         $_voteTable = new VoteTable();
@@ -121,7 +122,7 @@ class ParticipantController extends Kartaca_Controller
 
     private function _sendActivationEmail(Participant $p)
     {
-        //TODO: Send the email...
+        mail($p->email, "Activate Yourself", "Click on this link to activate your account: {$p->createActivationLink()}");
     }
 
 }
