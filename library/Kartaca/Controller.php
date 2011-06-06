@@ -10,10 +10,11 @@ class Kartaca_Controller extends Zend_Controller_Action
             if ($_participant->is_admin == 1) {
             	define("ADMIN_ENABLED", 1);
             } else {
-            	define("ADMIN_ENABLED", 0);
+                define("ADMIN_ENABLED", 0);
             }
             return $_participant;
         }
+        define("ADMIN_ENABLED", 0);
         return null;
 	}
 }

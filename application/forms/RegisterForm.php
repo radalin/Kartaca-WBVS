@@ -24,7 +24,10 @@ class RegisterForm extends Zend_Form
                 ->setLabel("Last Name")
                 ->setRequired();
 
-        $_sbmt = $this->createElement("submit", "accept-register")
+        $_company = $this->createElement("text", "company")
+                ->setLabel("Company");
+
+        $_sbmt = $this->createElement("submit", "accept")
                 ->setLabel("Accept Me As A Brother!");
 
         $this->addElements(array(
@@ -32,6 +35,7 @@ class RegisterForm extends Zend_Form
             $_password,
             $_fname,
             $_lname,
+            $_company,
             $_sbmt,
         ));
     }

@@ -1,3 +1,6 @@
+<div class="export">
+	<span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/admin/export?type=v">Export</a></span>
+</div>
 <table>
 	<tr>
 		<th>ID</th>
@@ -15,8 +18,8 @@
 			<td><?=$_v->begin_date?></td>
 			<td><?=$_v->expire_date?></td>
 			<td>
-				<a href="<?=APPLICATION_BASEURL_INDEX?>/admin/voteedit?act=edit&vid=<?=$_v->id?>" class="alt">Edit</a> | 
-				<a href="<?=APPLICATION_BASEURL_INDEX?>/admin/voteedit?act=del&vid=<?=$_v->id?>" class="alt">Delete</a>
+				<span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/admin/voteedit?act=edit&vid=<?=$_v->id?>">Edit</a></span> | 
+				<span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/admin/voteedit?act=del&vid=<?=$_v->id?>">Delete</a></span>
 			</td>
 		</tr>
 	<?php } ?>

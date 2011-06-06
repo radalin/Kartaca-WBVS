@@ -82,3 +82,7 @@ h2.subheader {
 .selected-answer {
     font-weight: bold;
 }
+
+.export {
+    text-align:right;
+}

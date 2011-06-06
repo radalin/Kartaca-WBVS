@@ -8,6 +8,7 @@ class Participant extends Kartaca_Model
 		$this->password = sha1($form->getPassword());
 		$this->fname = $form->getFname();
 		$this->lname = $form->getLname();
+		$this->company = $form->getCompany();
 	}
 
 	public function createActivationLink()

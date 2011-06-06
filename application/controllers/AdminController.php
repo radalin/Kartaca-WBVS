@@ -1,5 +1,7 @@
 <?php
 
+require_once(APPLICATION_PATH . "/forms/ParticipantInfoUpdateForm.php");
+
 class AdminController extends Kartaca_Controller
 {
 
@@ -35,8 +37,14 @@ class AdminController extends Kartaca_Controller
             $_t->deleteById($_vid);
             $this->_redirect(APPLICATION_BASEURL_INDEX . "/admin/vote");
         } else if ($_action === "edit") {
-        
-        } else if ($_action === "craete") {
+            $_form = new ParticipantInfoUpdateForm();
+            //TODO: fill the form with actual values...
+            $this->view->form = $_form;
+        } else if ($_action === "create") {
+            $_form = new ParticipantInfoUpdateForm();
+            //TODO: fill the form with actual values...
+            $this->view->form = $_form;
+        } else if ($_action === "save") {
             
         }
     }
@@ -57,9 +65,21 @@ class AdminController extends Kartaca_Controller
             $_t->deleteById($_pid);
             $this->_redirect(APPLICATION_BASEURL_INDEX . "/admin/participant");
         } else if ($_action === "edit") {
-        
-        } else if ($_action === "craete") {
-            
+            $_form = new ParticipantInfoUpdateForm();
+            //TODO: fill the form with actual values...
+            $_participant = $_t->findById($_pid);
+            $_form->loadFromModel($_participant);
+            $this->view->form = $_form;
+        } else if ($_action === "create") {
+            $_form = new ParticipantInfoUpdateForm();
+            //TODO: fill the form with actual values...
+            $this->view->form = $_form;
+        } else if ($_action === "save") {
+            if ($_pid === null) {
+                //insert
+            } else {
+                //update
+            }
         }
     }
 

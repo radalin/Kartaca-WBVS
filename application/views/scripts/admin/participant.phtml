@@ -1,3 +1,6 @@
+<div class="export">
+	<span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/admin/export?type=p">Export</a></span>
+</div>
 <table>
 	<tr>
 		<th>ID</th>
@@ -13,8 +16,8 @@
 			<td><?=$_p->fname?></td>
 			<td><?=$_p->lname?></td>
 			<td>
-				<a href="<?=APPLICATION_BASEURL_INDEX?>/admin/participantedit?act=edit&pid=<?=$_p->id?>" class="alt">Edit</a> | 
-				<a href="<?=APPLICATION_BASEURL_INDEX?>/admin/participantedit?act=del&pid=<?=$_p->id?>" class="alt">Delete</a>
+				<span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/admin/participantedit?act=edit&pid=<?=$_p->id?>">Edit</a></span> | 
+				<span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/admin/participantedit?act=del&pid=<?=$_p->id?>">Delete</a></span>
 			</td>
 		</tr>
 	<?php } ?>

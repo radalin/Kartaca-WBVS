@@ -1,7 +1,18 @@
 <?php foreach ($this->votes as $v) { ?>
-	<div class="span-8 colborder">
-    	<?php 
+    <div class="span-7 colborder" id="pie-container-<?=$v->id?>" style="width: 300px; height: 250px; margin-right: 10px;">
+    </div>
+    <div class="span-8 last" style="width: 550px;">
+    	<br />
+	    <h6 class="alt"><?=$v->name?></h6>
+		<div class="desc">
+		    <div class="body">
+		    	<?=nl2br($v->desc)?>
+		    </div>
+		</div>
+		<br /><br />
+		<?php 
     	$_selected = $this->selectedAnswers[$v->id];
+    	$_totalVoteCount = 0;
     	if ($_selected !== null) {
     		echo "<h6>Results:</h6><ul>";
 	    	foreach ($this->answers[$v->id] as $_a) {
@@ -10,6 +21,7 @@
 	    			$_str = '<span class="alt selected-answer">' . $_str . " (You have chosen wisely)</span>";
 	    		}
 	    		echo "<li>" . $_str . "</li>";
+	    		$_totalVoteCount += $_a->vote_count;
 	    	}
 	    	echo "</ul>";
 	    } else {
@@ -17,14 +29,48 @@
 	    	echo $this->forms[$v->id];
 	    }
 	    ?>
-    </div>
-    <div class="span-7 last">
-	    <h6 class="alt"><?=$v->name?></h6>
-		<div class="desc">
-		    <div class="body">
-		    	<?=nl2br($v->desc)?>
-		    </div>
-		</div>
 	</div>
     <hr />
+    <script>
+		var chart_<?=$v->id?>;
+		$(document).ready(function() {
+		   chart_<?=$v->id?> = new Highcharts.Chart({
+		      chart: {
+		         renderTo: 'pie-container-<?=$v->id?>',
+		         plotBackgroundColor: null,
+		         plotBorderWidth: null,
+		         plotShadow: false
+		      },
+		      title: {
+		         text: ''
+		      },
+		      tooltip: {
+		         formatter: function() {
+		            return this.y + ' % - <b>' + this.point.name + '</b>';
+		         }
+		      },
+		      plotOptions: {
+		         pie: {
+		            allowPointSelect: true,
+		            cursor: 'pointer',
+		            dataLabels: {
+		               enabled: true,
+		               formatter: function() {
+		                  return this.y + ' % - <b>'+ this.point.name + '</b>';
+		               }
+		            }
+		         }
+		      },
+		       series: [{
+		         type: 'pie',
+		         name: 'Vote Results',
+		         data: [
+		         	<?php foreach ($this->answers[$v->id] as $_a) { ?>
+		         		<?="['{$_a->text}', " . (int) ($_a->vote_count * 100 / $_totalVoteCount) . "],"?>
+		            <?php } ?>
+		         ]
+		      }]
+		   });
+		});
+	</script>
 <?php } ?>

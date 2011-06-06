@@ -11,6 +11,6 @@ class IndexController extends Kartaca_Controller
 
     public function indexAction()
     {
-        
+        $this->view->title = "Secret HQ";
     }
 }
