@@ -103,7 +103,7 @@
 			"file": "/home/roy/Sites/wbvs2/application/controllers/AdminController.php",
 			"settings":
 			{
-				"buffer_size": 4546,
+				"buffer_size": 4604,
 				"line_ending": "Unix"
 			}
 		},
@@ -167,7 +167,15 @@
 			"file": "/home/roy/Sites/wbvs2/application/views/scripts/admin/voteedit.phtml",
 			"settings":
 			{
-				"buffer_size": 192,
+				"buffer_size": 1686,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/configs/application.ini",
+			"settings":
+			{
+				"buffer_size": 1105,
 				"line_ending": "Unix"
 			}
 		}
@@ -175,6 +183,8 @@
 	"build_system": "",
 	"file_history":
 	[
+		"/home/roy/Sites/wbvs2/application/data/data.sql",
+		"/home/roy/Sites/wbvs2/application/data/meta.sql",
 		"/home/roy/Sites/wbvs2/application/forms/ParticipantInfoUpdateForm.php",
 		"/home/roy/Sites/wbvs2/application/controllers/ParticipantController.php",
 		"/home/roy/Sites/wbvs2/library/Kartaca/Controller.php",
@@ -236,9 +246,11 @@
 	{
 		"include_history":
 		[
+			""
 		],
 		"location_history":
 		[
+			"<open folders>"
 		]
 	},
 	"find_state":
@@ -246,6 +258,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"application_baseurl_index",
 			"redirect",
 			"vote",
 			"save()",
@@ -279,7 +292,7 @@
 	"groups":
 	[
 		{
-			"selected": 11,
+			"selected": 12,
 			"sheets":
 			[
 				{
@@ -369,15 +382,15 @@
 					"file": "/home/roy/Sites/wbvs2/application/controllers/AdminController.php",
 					"settings":
 					{
-						"buffer_size": 4546,
+						"buffer_size": 4604,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1875,
-								1875
+								1602,
+								1602
 							]
 						],
 						"settings":
@@ -387,7 +400,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 544,
+						"translation.y": 592,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -432,16 +445,17 @@
 						"selection":
 						[
 							[
-								651,
-								651
+								906,
+								906
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
-						"translation.y": 0,
+						"translation.y": 207,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -542,8 +556,8 @@
 						"selection":
 						[
 							[
-								246,
-								246
+								564,
+								564
 							]
 						],
 						"settings":
@@ -591,20 +605,47 @@
 					"file": "/home/roy/Sites/wbvs2/application/views/scripts/admin/voteedit.phtml",
 					"settings":
 					{
-						"buffer_size": 192,
+						"buffer_size": 1686,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								192,
-								192
+								234,
+								234
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/home/roy/Sites/wbvs2/application/configs/application.ini",
+					"settings":
+					{
+						"buffer_size": 1105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								381,
+								381
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -644,6 +685,14 @@
 		"height": 0,
 		"selected_items":
 		[
+			[
+				"meta",
+				"application/data/meta.sql"
+			],
+			[
+				"data",
+				"application/data/data.sql"
+			],
 			[
 				"voteedi",
 				"application/views/scripts/admin/voteedit.phtml"

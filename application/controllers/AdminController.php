@@ -37,6 +37,7 @@ class AdminController extends Kartaca_Controller
         $_vid = $this->getRequest()->getParam("vid");
         $_t = new VoteTable();
         $_form = new CreateVoteForm();
+        $this->view->answers = array();
         if ($_action === "del") {
             $_t->deleteById($_vid);
             $this->_redirect(APPLICATION_BASEURL_INDEX . "/admin/vote");

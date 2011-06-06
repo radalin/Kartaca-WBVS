@@ -32,6 +32,7 @@ $this->headLink()->appendStylesheet($this->baseUrl() . "/style.css");
         <div id="header">
             <span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>">Home</a></span> |
             <?php if (Zend_Auth::getInstance()->getIdentity()) { ?>
+                <span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/participant/update">Update My Info</a></span> |
                 <span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/vote">Participate A Vote</a></span> |
                 <span class="alt"><a href="<?=APPLICATION_BASEURL_INDEX?>/participant/subscriptions">What I Voted</a></span> |
                 <?php if (ADMIN_ENABLED === 1) { ?>

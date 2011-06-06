@@ -3,6 +3,7 @@
 require_once(APPLICATION_PATH . "/forms/LoginForm.php");
 require_once(APPLICATION_PATH . "/forms/RegisterForm.php");
 require_once(APPLICATION_PATH . "/forms/VoteForm.php");
+require_once(APPLICATION_PATH . "/forms/ParticipantUpdateForm.php");
 
 class ParticipantController extends Kartaca_Controller
 {
@@ -54,6 +55,7 @@ class ParticipantController extends Kartaca_Controller
 
         if ($_result->isValid()) {
             $this->view->loggedIn = true;
+            $this->_redirect(APPLICATION_BASEURL_INDEX . "/index");
         } else {
             $this->_redirect(APPLICATION_BASEURL_INDEX . "/participant/index/error/1");
         }
@@ -118,6 +120,25 @@ class ParticipantController extends Kartaca_Controller
         $this->view->answers = $_answers;
         $this->view->selectedAnswers = $_selectedAnswers;
         $this->view->forms = $_forms;
+    }
+
+    public function updateAction()
+    {
+        if ($this->_participant === null) {
+            throw new Exception("We don't like trespassers, do you know that? Either knock the door or don't come at all...");
+        }
+        parent::isParticipanActive();
+
+        $_form = new ParticipantUpdateForm();
+        $_form->loadFromModel($this->_participant);
+        if ($_POST) {
+            if ($_form->isValid($_POST)) {
+                $_p = $this->_table->findById($this->_participant->id);
+                $_p->loadFromForm($_form);
+                $_p->save();
+            }
+        }
+        $this->view->form = $_form;
     }
 
     private function _sendActivationEmail(Participant $p)
