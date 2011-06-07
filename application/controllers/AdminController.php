@@ -33,11 +33,13 @@ class AdminController extends Kartaca_Controller
 
     public function voteeditAction()
     {
+        $this->view->title = "Create New/Change";
         $_action = $this->getRequest()->getParam("act");
         $_vid = $this->getRequest()->getParam("vid");
         $_t = new VoteTable();
         $_form = new CreateVoteForm();
         $this->view->answers = array();
+        $this->view->answerEditingEnabled = false;
         if ($_action === "del") {
             $_t->deleteById($_vid);
             $this->_redirect(APPLICATION_BASEURL_INDEX . "/admin/vote");
@@ -47,6 +49,7 @@ class AdminController extends Kartaca_Controller
             $_form->loadFromModel($_vote);
             $this->view->answers = $_vote->findAnswers();
         } else if ($_action === "create") {
+            $this->view->answerEditingEnabled = true;
         } else if ($_action === "save") {
             $_vote = null;
             if ($_vid != "") {
@@ -57,7 +60,18 @@ class AdminController extends Kartaca_Controller
                 if ($_vid == "") {
                     $_vote = $_t->createRow();
                     $_vote->loadFromForm($_form);
-                    $_vote->insert();
+                    $_newVid = $_vote->insert();
+                    //Now Let's go for the answers...
+                    var_dump($_newVid);
+                    $_answerList = $_form->getAnswersAsArray();
+                    $_answerTable = new AnswersTable();
+                    foreach ($_answerList as $_text) {
+                        $_answerRow = $_answerTable->createRow();
+                        $_answerRow->vote_id = $_newVid;
+                        $_answerRow->text = $_text;
+                        $_answerRow->vote_count = 0;
+                        $_answerRow->insert();
+                    }
                 } else {
                     $_vote->loadFromForm($_form);
                     $_vote->save();
@@ -79,6 +93,7 @@ class AdminController extends Kartaca_Controller
 
     public function participanteditAction()
     {
+        $this->view->title = "Create New/Change";
         $_action = $this->getRequest()->getParam("act");
         $_pid = $this->getRequest()->getParam("pid");
         $_t = new ParticipantsTable();

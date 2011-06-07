@@ -1,67 +1,115 @@
 <?php if ($this->errorMsg) { ?>
 <div class="error">
-	<?php echo $this->errorMsg; ?>
+    <?php echo $this->errorMsg; ?>
 </div>
 <?php } ?>
 <div class="span-8 colborder" style="width: 400px;">
-	<?=$this->form?>
+    <?=$this->form?>
 </div>
 <div class="span-7 last" style="width: 300px;">
-	<?php
-		$_totalVoteCount = 0;
-		echo "<h6>Results:</h6><ul>";
-		foreach ($this->answers as $_a) {
-			$_str = $_a->vote_count . " - " . $_a->text;
-			echo "<li>" . $_str . "</li>";
-			$_totalVoteCount += $_a->vote_count;
-		}
-		echo "</ul>";
-	?>
-	<div id="chart" style="width:100%;">
-	</div>
+    <?php
+        echo "<h6>Answers:</h6>";
+        if ($this->answerEditingEnabled) { ?>
+            <input type="text" id="answer-text"> <span class="alt"><a href="#" id="add-answer-btn">Add Answer</a></span>
+            <ul id='answers-list'></ul>
+        <?php } else {
+            echo "<ul>";
+            $_totalVoteCount = 0;
+            foreach ($this->answers as $_a) {
+                $_str = $_a->vote_count . " - " . $_a->text;
+                echo "<li>" . $_str . "</li>";
+                $_totalVoteCount += $_a->vote_count;
+            }
+            echo "</ul>";
+        }
+    ?>
+    <div id="chart" style="width:100%;">
+    </div>
 </div>
 <hr />
 <?php if ($this->answers) { ?>
-<script>
-		var chart;
-		$(document).ready(function() {
-		   chart = new Highcharts.Chart({
-		      chart: {
-		         renderTo: 'chart',
-		         plotBackgroundColor: null,
-		         plotBorderWidth: null,
-		         plotShadow: false
-		      },
-		      title: {
-		         text: ''
-		      },
-		      tooltip: {
-		         formatter: function() {
-		            return this.y + ' % - <b>' + this.point.name + '</b>';
-		         }
-		      },
-		      plotOptions: {
-		         pie: {
-		            allowPointSelect: true,
-		            cursor: 'pointer',
-		            dataLabels: {
-		               enabled: true,
-		               formatter: function() {
-		                  return this.y + ' % - <b>'+ this.point.name + '</b>';
-		               }
-		            }
-		         }
-		      },
-		       series: [{
-		         type: 'pie',
-		         name: 'Vote Results',
-		         data: [
-		         	<?php foreach ($this->answers as $_a) { ?>
-		         		<?="['{$_a->text}', " . (int) ($_a->vote_count * 100 / $_totalVoteCount) . "],"?>
-		            <?php } ?>
-		         ]
-		      }]
-		   });
-		});
-	</script>
+    <script>
+        var chart;
+        $(document).ready(function() {
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'chart',
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                },
+                title: {
+                    text: ''
+                },
+                tooltip: {
+                    formatter: function() {
+                        return this.y + ' % - <b>' + this.point.name + '</b>';
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            formatter: function() {
+                                return this.y + ' % - <b>'+ this.point.name + '</b>';
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Vote Results',
+                    data: [
+                        <?php foreach ($this->answers as $_a) { ?>
+                            <?="['{$_a->text}', " . (int) ($_a->vote_count * 100 / $_totalVoteCount) . "],"?>
+                        <?php } ?>
+                    ]
+                }]
+           });
+        });
+    </script>
+<?php } else { ?>
+    <script>
+        var calculateAnswer = function() {
+            var hiddenAnswerVal = "";
+            $("#answers-list li span.val").each(function() {
+                hiddenAnswerVal += (hiddenAnswerVal == "" ? "" : "----") + $(this).html();
+            })
+            $("#answers").val(hiddenAnswerVal);
+        }
+        $(document).ready(function() {
+           $("#add-answer-btn").click(function() {
+                var answer = $("#answer-text");
+                $("#answers-list")
+                    .append($("<li>")
+                        .append(
+                            $("<span>")
+                                .attr("class", "val")
+                                .html(answer.val())
+                        )
+                        .append(" - ")
+                        .append(
+                            $("<span>")
+                                .attr("class", "alt")
+                                .append(
+                                    $("<a>")
+                                        .attr("href", "#")
+                                        .html("Remove")
+                                        .click(function() {
+                                            $(this).parent().parent().attr("class", "remove");
+                                            $("#answers-list li.remove").remove();
+                                            calculateAnswer();
+                                        }
+                                    )
+                                )
+                        )
+                );
+                answer.val("");
+                calculateAnswer();
+            }); 
+            return false;
+        });
+    </script>
 <?php } ?>

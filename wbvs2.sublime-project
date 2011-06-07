@@ -79,7 +79,7 @@
 			"file": "/home/roy/Sites/wbvs2/application/layouts/scripts/layout.phtml",
 			"settings":
 			{
-				"buffer_size": 3168,
+				"buffer_size": 3290,
 				"line_ending": "Unix"
 			}
 		},
@@ -103,7 +103,7 @@
 			"file": "/home/roy/Sites/wbvs2/application/controllers/AdminController.php",
 			"settings":
 			{
-				"buffer_size": 4604,
+				"buffer_size": 4644,
 				"line_ending": "Unix"
 			}
 		},
@@ -119,7 +119,7 @@
 			"file": "/home/roy/Sites/wbvs2/application/views/scripts/participant/subscriptions.phtml",
 			"settings":
 			{
-				"buffer_size": 2217,
+				"buffer_size": 2232,
 				"line_ending": "Unix"
 			}
 		},
@@ -128,38 +128,6 @@
 			"settings":
 			{
 				"buffer_size": 1526,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/roy/Sites/wbvs2/library/Kartaca/Model.php",
-			"settings":
-			{
-				"buffer_size": 643,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/roy/Sites/wbvs2/application/forms/RegisterForm.php",
-			"settings":
-			{
-				"buffer_size": 1906,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/roy/Sites/wbvs2/application/forms/CreateVoteForm.php",
-			"settings":
-			{
-				"buffer_size": 2164,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/roy/Sites/wbvs2/application/models/Vote.php",
-			"settings":
-			{
-				"buffer_size": 919,
 				"line_ending": "Unix"
 			}
 		},
@@ -178,11 +146,48 @@
 				"buffer_size": 1105,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/controllers/ParticipantController.php",
+			"settings":
+			{
+				"buffer_size": 4832,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/forms/ParticipantUpdateForm.php",
+			"settings":
+			{
+				"buffer_size": 1562,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/forms/ParticipantInfoUpdateForm.php",
+			"settings":
+			{
+				"buffer_size": 1558,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/roy/Sites/wbvs2/application/forms/RegisterForm.php",
+			"settings":
+			{
+				"buffer_size": 1956,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
 	"file_history":
 	[
+		"/home/roy/Sites/wbvs2/application/views/scripts/participant/update.phtml",
+		"/home/roy/Sites/wbvs2/application/forms/CreateVoteForm.php",
+		"/home/roy/Sites/wbvs2/application/models/Vote.php",
+		"/home/roy/Sites/wbvs2/library/Kartaca/Model.php",
+		"/home/roy/Sites/wbvs2/application/forms/RegisterForm.php",
 		"/home/roy/Sites/wbvs2/application/data/data.sql",
 		"/home/roy/Sites/wbvs2/application/data/meta.sql",
 		"/home/roy/Sites/wbvs2/application/forms/ParticipantInfoUpdateForm.php",
@@ -192,11 +197,9 @@
 		"/home/roy/Sites/wbvs2/application/controllers/IndexController.php",
 		"/home/roy/Sites/wbvs2/application/views/scripts/participant/voteedit.phtml",
 		"/home/roy/Sites/wbvs2/application/views/scripts/admin/participantedit.phtml",
-		"/home/roy/Sites/wbvs2/application/forms/RegisterForm.php",
 		"/home/roy/Sites/wbvs2/application/views/scripts/participant/register.phtml",
 		"/home/roy/Sites/wbvs2/library/Kartaca/Table.php",
 		"/home/roy/Sites/wbvs2/public/index.php",
-		"/home/roy/Sites/wbvs2/library/Kartaca/Model.php",
 		"/home/roy/Sites/wbvs2/public/jquery-161-min.js",
 		"/home/roy/Sites/wbvs2/application/controllers/VoteController.php",
 		"/home/roy/Sites/wbvs2/application/views/scripts/vote/index.phtml",
@@ -204,7 +207,6 @@
 		"/home/roy/Sites/wbvs2/public/style.css",
 		"/home/roy/Sites/wbvs2/application/models/tables/ParticipantSubscriptionsTable.php",
 		"/home/roy/Sites/wbvs2/application/forms/VoteForm.php",
-		"/home/roy/Sites/wbvs2/application/models/Vote.php",
 		"/home/roy/Sites/wbvs2/application/layouts/scripts/layout.phtml",
 		"/home/roy/Sites/wbvs2/application/views/scripts/participant/subscriptions.phtml",
 		"/home/roy/Sites/wbvs2/application/models/tables/ParticipantsTable.php",
@@ -292,7 +294,7 @@
 	"groups":
 	[
 		{
-			"selected": 12,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -300,15 +302,15 @@
 					"file": "/home/roy/Sites/wbvs2/application/layouts/scripts/layout.phtml",
 					"settings":
 					{
-						"buffer_size": 3168,
+						"buffer_size": 3290,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1151,
-								1151
+								891,
+								891
 							]
 						],
 						"settings":
@@ -382,15 +384,15 @@
 					"file": "/home/roy/Sites/wbvs2/application/controllers/AdminController.php",
 					"settings":
 					{
-						"buffer_size": 4604,
+						"buffer_size": 4644,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1602,
-								1602
+								80,
+								142
 							]
 						],
 						"settings":
@@ -400,7 +402,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 592,
+						"translation.y": 0,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -438,15 +440,15 @@
 					"file": "/home/roy/Sites/wbvs2/application/views/scripts/participant/subscriptions.phtml",
 					"settings":
 					{
-						"buffer_size": 2217,
+						"buffer_size": 2232,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								906,
-								906
+								203,
+								203
 							]
 						],
 						"settings":
@@ -455,7 +457,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
-						"translation.y": 207,
+						"translation.y": 0,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -490,25 +492,24 @@
 				},
 				{
 					"buffer": 7,
-					"file": "/home/roy/Sites/wbvs2/library/Kartaca/Model.php",
+					"file": "/home/roy/Sites/wbvs2/application/views/scripts/admin/voteedit.phtml",
 					"settings":
 					{
-						"buffer_size": 643,
+						"buffer_size": 1686,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9,
-								10
+								532,
+								532
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -518,46 +519,44 @@
 				},
 				{
 					"buffer": 8,
-					"file": "/home/roy/Sites/wbvs2/application/forms/RegisterForm.php",
+					"file": "/home/roy/Sites/wbvs2/application/configs/application.ini",
 					"settings":
 					{
-						"buffer_size": 1906,
+						"buffer_size": 1105,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								867,
-								867
+								461,
+								501
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0,
-						"translation.y": 223,
+						"translation.y": 0,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 9,
-					"file": "/home/roy/Sites/wbvs2/application/forms/CreateVoteForm.php",
+					"file": "/home/roy/Sites/wbvs2/application/controllers/ParticipantController.php",
 					"settings":
 					{
-						"buffer_size": 2164,
+						"buffer_size": 4832,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								564,
-								564
+								4830,
+								4830
 							]
 						],
 						"settings":
@@ -567,25 +566,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 96,
+						"translation.y": 1440,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 10,
-					"file": "/home/roy/Sites/wbvs2/application/models/Vote.php",
+					"file": "/home/roy/Sites/wbvs2/application/forms/ParticipantUpdateForm.php",
 					"settings":
 					{
-						"buffer_size": 919,
+						"buffer_size": 1562,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6,
-								6
+								1142,
+								1142
 							]
 						],
 						"settings":
@@ -602,50 +601,53 @@
 				},
 				{
 					"buffer": 11,
-					"file": "/home/roy/Sites/wbvs2/application/views/scripts/admin/voteedit.phtml",
+					"file": "/home/roy/Sites/wbvs2/application/forms/ParticipantInfoUpdateForm.php",
 					"settings":
 					{
-						"buffer_size": 1686,
+						"buffer_size": 1558,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								234,
-								234
+								930,
+								930
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 8,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 0,
+						"translation.y": 384,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 12,
-					"file": "/home/roy/Sites/wbvs2/application/configs/application.ini",
+					"file": "/home/roy/Sites/wbvs2/application/forms/RegisterForm.php",
 					"settings":
 					{
-						"buffer_size": 1105,
+						"buffer_size": 1956,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								381,
-								381
+								1167,
+								1167
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -686,6 +688,26 @@
 		"selected_items":
 		[
 			[
+				"applica",
+				"application/configs/application.ini"
+			],
+			[
+				"register",
+				"application/forms/RegisterForm.php"
+			],
+			[
+				"partic",
+				"application/controllers/ParticipantController.php"
+			],
+			[
+				"participantinfo",
+				"application/forms/ParticipantInfoUpdateForm.php"
+			],
+			[
+				"partici",
+				"application/controllers/ParticipantController.php"
+			],
+			[
 				"meta",
 				"application/data/meta.sql"
 			],
@@ -710,14 +732,6 @@
 				"library/Kartaca/Model.php"
 			],
 			[
-				"partici",
-				"application/models/Participant.php"
-			],
-			[
-				"register",
-				"application/forms/RegisterForm.php"
-			],
-			[
 				"votecon",
 				"application/controllers/VoteController.php"
 			],
@@ -736,10 +750,6 @@
 			[
 				"parti",
 				"application/models/Participant.php"
-			],
-			[
-				"partic",
-				"application/controllers/ParticipantController.php"
 			],
 			[
 				"participanco",

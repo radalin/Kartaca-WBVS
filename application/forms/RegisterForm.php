@@ -48,6 +48,8 @@ class RegisterForm extends Zend_Form
             if (array_key_exists($_attr, $this->_elements)) {
                 //So it's one of the items I have in the form, so return the value
                 return $this->getElement($_attr)->getValue();
+            } else {
+                return null;
             }
         }
         //Call the parent's __call too, in order to provide support for parent's magic too...

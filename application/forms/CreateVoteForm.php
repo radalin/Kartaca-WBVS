@@ -28,14 +28,23 @@ class CreateVoteForm extends Zend_Form
 
         $_id = $this->createElement("hidden", "vid");
 
+        $_answers = $this->createElement("hidden", "answers");
+
         $this->addElements(array(
             $_name,
             $_desc,
             $_beginDate,
             $_expireDate,
             $_id,
+            $_answers,
             $_sbmt,
         ));
+    }
+
+    public function getAnswersAsArray()
+    {
+        return explode("----", $this->getElement("answers")->getValue());
+            
     }
 
     public function loadFromModel(Vote $v)

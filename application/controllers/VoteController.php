@@ -2,10 +2,10 @@
 
 class VoteController extends Kartaca_Controller
 {
-	/**
-	 * @var VoteTable
-	 */
-	protected static $_table;
+    /**
+     * @var VoteTable
+     */
+    protected static $_table;
 
     /**
      *
