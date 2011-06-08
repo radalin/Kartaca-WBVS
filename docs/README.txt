@@ -7,6 +7,9 @@ manual files generated or hand written.  Ideally, this directory would remain
 in your development environment only and should not be deployed with your
 application to it's final production location.
 
+This project is based on ZF-Blog project. You can find it here:
+
+https://code.kartaca.com/zf-blog
 
 Setting Up Your VHOST
 =====================
