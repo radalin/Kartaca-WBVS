@@ -107,8 +107,7 @@ class AdminController extends Kartaca_Controller
     }
 
     public function participanteditAction()
-    {
-        var_dump($_POST);
+    {   
         $this->view->title = "Create New/Change";
         $_action = $this->getRequest()->getParam("act");
         $_pid = $this->getRequest()->getParam("pid");

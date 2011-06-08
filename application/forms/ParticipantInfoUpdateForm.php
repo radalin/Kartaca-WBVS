@@ -31,11 +31,13 @@ class ParticipantInfoUpdateForm extends RegisterForm
 
         $_isActive = $this->createElement("checkbox", "isactive")
             ->setValue("1")
+            ->setChecked(false)
             ->setLabel("Active?");
         $this->addElement($_isActive);
 
         $_isAdmin = $this->createElement("checkbox", "isadmin")
             ->setValue("1")
+            ->setChecked(false)
             ->setLabel("Administrator?");
         $this->addElement($_isAdmin);
 
