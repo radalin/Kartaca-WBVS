@@ -11,11 +11,11 @@ class Participant extends Kartaca_Model
 		$this->fname = $form->getFname();
 		$this->lname = $form->getLname();
 		$this->company = $form->getCompany();
-		if ($form->getIsadmin() == 1) {
-			$this->is_admin = 1;
+		if (null !== $form->getIsadmin()) {
+			$this->is_admin = $form->getIsadmin();
 		}
-		if ($form->getIsactive()) {
-			$this->is_active = 1;
+		if (null !== $form->getIsactive()) {
+			$this->is_active = $form->getIsactive();
 		}
 	}
 

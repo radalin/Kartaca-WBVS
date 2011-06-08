@@ -1,8 +1,15 @@
-
-
-<h4>Welcome to the Web Based Voting System!</h4>
-</p>
-We all know you can be the one who will decide the fate of the votes! Join Us and we shall see all the questions answered together!
-</p>
-<br />
-<a href="<?=APPLICATION_BASEURL_INDEX?>/participant/register">Join Us!</a>
+<?php if (Zend_Auth::getInstance()->getIdentity()) { ?>
+	<h4>Welcome to the Web Based Voting System!</h4>
+	</p>
+		Now that you are one of us. I think you should say your words on the active votes. Use the links above. Change or update your information. Go on, make yourself useful.
+	</p>
+	<br />
+	<a href="<?=APPLICATION_BASEURL_INDEX?>/participant/register">Go and Say Your Word!</a>
+<?php } else { ?>
+	<h4>Welcome to the Web Based Voting System!</h4>
+	</p>
+	We all know you can be the one who will decide the fate of the votes! Join Us and we shall see all the questions answered together!
+	</p>
+	<br />
+	<a href="<?=APPLICATION_BASEURL_INDEX?>/participant/register">Join Us!</a>
+<?php } ?>

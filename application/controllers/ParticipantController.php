@@ -39,6 +39,9 @@ class ParticipantController extends Kartaca_Controller
 
     public function loginAction()
     {
+        if (null !== $this->_participant) {
+            throw new Exception("You have already passed the checkpoint. What else do you want? If you want to get in again, I don't know why, then say your goodbyes first.");
+        }
         $this->view->title = "First Checkpoint";
         //First check if the form is valid...
         $_form = new LoginForm();
@@ -69,6 +72,10 @@ class ParticipantController extends Kartaca_Controller
 
     public function registerAction()
     {
+        if (null !== $this->_participant) {
+            throw new Exception("What?! You have already become one uf? What do you want to achieve? Trick us?! You cheap trickster!");
+        }
+
         $this->view->title = "Name Yourself!";
         $_showError = false;
         $_success = false;
@@ -79,7 +86,6 @@ class ParticipantController extends Kartaca_Controller
                 $p = $this->_table->createRow();
                 $p->loadFromForm($_form);
                 $p->insert();
-                $this->_sendActivationEmail($p);
                 $_success = true;
             } else {
                 $_showError = true;
@@ -95,7 +101,7 @@ class ParticipantController extends Kartaca_Controller
 
     public function subscriptionsAction()
     {
-        if ($this->_participant === null) {
+        if (null === $this->_participant) {
             throw new Exception("We don't like trespassers, do you know that? Either knock the door or don't come at all...");
         }
         parent::isParticipanActive();
@@ -124,7 +130,7 @@ class ParticipantController extends Kartaca_Controller
 
     public function updateAction()
     {
-        if ($this->_participant === null) {
+        if (null === $this->_participant) {
             throw new Exception("We don't like trespassers, do you know that? Either knock the door or don't come at all...");
         }
         parent::isParticipanActive();
@@ -140,10 +146,4 @@ class ParticipantController extends Kartaca_Controller
         }
         $this->view->form = $_form;
     }
-
-    private function _sendActivationEmail(Participant $p)
-    {
-        mail($p->email, "Activate Yourself", "Click on this link to activate your account: {$p->createActivationLink()}");
-    }
-
 }

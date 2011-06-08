@@ -6,7 +6,6 @@ require_once(APPLICATION_PATH . "/forms/CreateVoteForm.php");
 
 class AdminController extends Kartaca_Controller
 {
-
     /**
      *
      * @var Participant
@@ -62,7 +61,6 @@ class AdminController extends Kartaca_Controller
                     $_vote->loadFromForm($_form);
                     $_newVid = $_vote->insert();
                     //Now Let's go for the answers...
-                    var_dump($_newVid);
                     $_answerList = $_form->getAnswersAsArray();
                     $_answerTable = new AnswersTable();
                     foreach ($_answerList as $_text) {
@@ -93,6 +91,7 @@ class AdminController extends Kartaca_Controller
 
     public function participanteditAction()
     {
+        var_dump($_POST);
         $this->view->title = "Create New/Change";
         $_action = $this->getRequest()->getParam("act");
         $_pid = $this->getRequest()->getParam("pid");
@@ -121,7 +120,7 @@ class AdminController extends Kartaca_Controller
                     $_participant->loadFromForm($_form);
                     $_participant->save();
                 }
-                $this->_redirect(APPLICATION_BASEURL_INDEX . "/admin/participant");
+                //$this->_redirect(APPLICATION_BASEURL_INDEX . "/admin/participant");
             } else {
                 $this->view->errorMsg = "Correct the errors below...";
             }
