@@ -1,4 +1,24 @@
-<?php if (Zend_Auth::getInstance()->getIdentity()) { ?>
+<?php 
+/**
+ * This file is part of Kartaca WBVS
+ *
+ * Kartaca WBVS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * Kartaca WBVS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with Kartaca WBVS. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @category   Kartaca
+ * @copyright  Copyright (c) 2010 Kartaca (http://www.kartaca.com)
+ * @license    http://www.gnu.org/licenses/ GPL
+ */
+
+if (Zend_Auth::getInstance()->getIdentity()) { ?>
 	<h4>Welcome to the Web Based Voting System!</h4>
 	</p>
 		Now that you are one of us. I think you should say your words on the active votes. Use the links above. Change or update your information. Go on, make yourself useful.

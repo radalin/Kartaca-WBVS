@@ -14,13 +14,13 @@ Setting Up Your VHOST
 The following is a sample VHOST you might want to consider for your project.
 
 <VirtualHost *:80>
-   DocumentRoot "/Users/roysimkes/Sites/zf-examples/zf-blog/public"
-   ServerName zf-blog.local
+   DocumentRoot "/Users/roysimkes/Sites/zf-examples/kartaca-wbvs/public"
+   ServerName kartaca-wbvs.local
 
    # This should be omitted in the production environment
    SetEnv APPLICATION_ENV development
     
-   <Directory "/Users/roysimkes/Sites/zf-examples/zf-blog/public">
+   <Directory "/Users/roysimkes/Sites/zf-examples/kartaca-wbvs/public">
        Options Indexes MultiViews FollowSymLinks
        AllowOverride All
        Order allow,deny
